@@ -16,14 +16,6 @@
 		<form action="mydata.php" method="post">
 			<div class="flex-container">
 				<div class="feature warna-kuning">
-					<h4>Last Seen</h4>
-					<hr>
-					<span class="warna-hitam">
-						<p><?php date_default_timezone_set('Asia/Jakarta'); $last_seen = date("d-m-Y | H:i:s"); echo $last_seen; ?></p>
-					</span>
-					<input type="hidden" name="last_seen" value="<?= $last_seen; ?>">
-				</div>
-				<div class="feature warna-kuning">
 					<h4>Display Date</h4>
 					<hr>
 					<label class="switch">
@@ -74,7 +66,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
-<script type="text/javascript" src="js/Realtime.js"></script>
+<script type="text/javascript" src="Realtime.js"></script>
 <script type="text/javascript">
 	setAll();
 </script>
