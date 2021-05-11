@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probut - Jasa Programmer</title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Style CSS Personal -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="../image/icon.png" type="image/icon type">
+</head>
+<body>
+	<div id="popUpOrder">
+		<div class="form">
+			<form method="POST" action="">
+				<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Nama</label>
+				  <input required type="text" class="form-control" id="namaClient" placeholder="">
+				</div>
+				<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Nomber Telepon</label>
+				  <input required type="text" class="form-control" id="noClient">
+				</div>
+				<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Jenis Pekerjaan</label>
+				  <select id="Job" required class="form-select" aria-label="Default select example" onclick="SelectJob()">
+					  <option selected>Select Job</option>
+					  <option value="Front-End Development"> Front-End Development</option>
+					  <option value="Back-End Development"> Back-End Development</option>
+					  <option value="Front-End and Back-End Development">Front-End and Back-End Development</option>
+					  <option value="Implementasi Algoritma">Implementasi Algoritma</option>
+					  <option value="Lain-Lain">Lain-Lain</option>
+					</select>
+				</div>
+				<div class="mb-3">
+				  	<label for="exampleFormControlInput1" class="form-label">Bayaran Perjam	</label>
+				  	<select id="RangeHarga" required class="form-select" aria-label="Default select example">
+					  <option readOnly selected>0</option>
+					</select>
+				</div>
+
+				<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Email</label>
+				  <input required type="email" class="form-control" id="emailClient" placeholder="Probut01@example.com">
+				</div>
+				<div class="mb-3">
+				  <label for="exampleFormControlTextarea1" class="form-label">Pesan untuk development</label>
+				  <textarea required class="form-control" id="pesanClient" rows="3" placeholder="Jelaskan Detail Tugas Anda"></textarea>
+				</div>
+				<div class="mb-3">
+
+					<button name="" class="btn btn-success" style="width: 45%" onclick="addData()">
+						Order
+					</button>
+					<a onclick="closePopUp()" class="btn btn-danger">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div id="header" class="row">
+			<div class="col-sm-1">
+				<img src="../image/icon.png" >
+			</div>
+			<div class="col-sm-6">
+				<i id="iconNavbar" class="fa fa-eye" onclick="ShowNavbar()"></i>
+				<div id="navbar" class="navbar">
+					<a href="#HOME" class="btn">HOME</a>
+					<a href="#HOME" class="btn">ABOUT</a>
+					<a href="#bar-info-service" class="btn">SERVICE</a>
+					<a href="#info-contact" class="btn">CONTACT</a>
+					<a onclick="openPopUp();" href="#popUpOrder" class="btn">ORDER NOW</a>
+				</div>
+			</div>
+			<div id="number-info" class="col-2">
+				<i class="fa fa-volume-control-phone"></i>
+				+62 83829435503
+			</div>
+			<div id="email-info" class="col-3">
+				<i class="fa fa-envelope"></i>
+				dikdik.darmawan06@gmail.com
+			</div>
+		</div>
+		<div id="bar-info-order" class="row bg-warning">
+			<div class="col">
+				<i class="fa fa-gears"></i>
+				<span> All Orders</span>
+			</div>
+		</div>
+		<div id="HOME" class="row">
+			<div class="col">
+				<img src="../image/Home.png">
+				<div>
+				<h5>Probut adalah Jasa Pembuatan Software.</h5>
+				<div>Percayakan kepada Probut dengan pengembangan yang menggunakan metode Agile yang bertujuan untuk memaksimalkan performa suatu program dan menghindari bug/kesalahan. Kami bersedia melayani anda, fast respon dan ada garansi perbaikan/perubahan.<br>
+				Moto Probut "Problem Solving Is A Key" karena kami percaya bahwa suatu masalah bisa diselesaikan dengan perencanaan yang tersusun rapi.
+				</div>
+				</div> 
+			</div>
+			</div>
+		</div>
+		<div id="bar-info-service">
+			<div class="item">
+				<h5> create a website <i class="ready fa fa-calendar-check-o"></i></h5>
+				<div class="label">Jasa pembuatan Website dengan tampilan responsive dan perfoma yang sangat cepat yang menggunakan framework Bootstrap, React.js dan Codeigniter. Perbaikan terus menerus sampai waktu yang sudah ditentukan.
+				</div>
+			</div>
+			<div class="item">
+				<h5>Website Maintenance <i class="ready fa fa-calendar-check-o"></i></h5>
+				<div class="label">Jasa pemeliharaan website seperti merubah tampilan website, menambahkan produk, membuat fitur baru dan memperbaiki bug/kesalahan. Pemeliharaan terus menerus sampai waktu yang sudah di tentukan.</div>
+			</div>
+			<div class="item">
+				<h5>Help your work <i class="ready fa fa-calendar-check-o"></i></h5>
+				<div class="label">Jasa membantu perkerjaan anda dalam bidang programmer seperti membuat website untuk skripsi, membuat algoritma, mengimplementasikan algoritma di projek anda dan lain-lain.
+				kami menerima bahasa pemrograman C, C++, C#, Python, Java, Javascipt dan PHP.
+				</div>
+			</div>
+			<div class="item">
+				<h5>Create A Game <i class="noready fa fa-calendar-minus-o"></i></h5>
+				<div class="label">Jasa pembuatan game menggunakan Unity 3D. kami bersedia membuat 3D Character, 3D Property, Gameplay Game, Animasi Character dan lain-lain. kami menggunakan bahasa C++ dan C# untuk pengembangan game development</div>
+			</div>
+		</div>
+		<div id="info-method" class="row">
+			<div class="img col-sm">
+				<img src="../image/methodAgile.png">
+			</div>
+			<div class="info col-sm">
+				<h5>Metode pengembangan yang kami gunakan adalah <span>Agile</span></h5>
+				<div>Agile Software Development adalah metodologi pengembangan software yang didasarkan pada proses pengerjaan yang dilakukan berulang dimana, aturan dan solusi yang disepakati dilakukan dengan kolaborasi antar tiap tim secara terorganisir dan terstruktur.
+				Agile development sendiri merupakan model pengembangan perangkat lunak dalam jangka pendek. Kemudian, membutuhkan adaptasi yang cepat dalam mengatasi setiap perubahan. Nilai terpenting dari Agile development ini adalah memungkinkan sebuah tim dalam mengambil keputusan dengan cepat, kualitas dan prediksi yang baik, serta memiliki potensi yang baik dalam menangani setiap perubahan.
+				</div>
+			</div>
+		</div>
+		<div id="info-contact" class="row">
+			<div class="info col-sm">
+				<h5>Contact <span>Dikdik Darmawan</span></h5>
+				<div>
+					<p>
+					Saya seorang Programmer pada bagian Front-end ataupun Back-end. Keseharian menjadi freelancer dan berkuliah di salah satu Universitas negeri Bandung
+					</p><p>CV/Project yang sudah dibuat :  https://github.com/darmawan06
+					</p>
+					<p>
+					Bahasa Pemrograman/Keahlian
+					</p>
+					<div id="list-keahlian">
+						<img src="../image/bahasaPemrograman/c.png">
+						<img src="../image/bahasaPemrograman/c++.png">
+						<img src="../image/bahasaPemrograman/cshap.png">
+						<img src="../image/bahasaPemrograman/java.png">
+						<img src="../image/bahasaPemrograman/js.png">
+						<img src="../image/bahasaPemrograman/php.png">
+						<img src="../image/bahasaPemrograman/python.png">
+						<img src="../image/bahasaPemrograman/mysql.png">
+						<img src="../image/bahasaPemrograman/unity.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="img col-sm">
+				<img src="../image/myfoto.jpg">
+			</div>
+		</div>
+		<div id="footer" class="row">
+			<div class="col-sm">
+				<div>
+					© 2021 Probut - Jasa Programmer Indonesia
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+:root{
+	--color-primary : #5271ff;
+	--color-second : #ffbd59;
+	--color-white : white;
+	--color-gray : #575757;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+body{
+	overflow-x: hidden;
+}
+
+#header{
+	border-bottom: 1px var(--color-second) solid;
+	background: var(--color-gray);
+}
+#header .col-sm-1 img{
+	width:80px;
+} 
+#navbar{
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+}
+#iconNavbar{
+	color: white;
+	display: none;
+	font-size: 25px;
+	cursor: pointer;
+}
+#navbar a{
+	background: transparent;
+	color : var(--color-white);
+	font-weight: bold;
+}
+
+#navbar a:hover{
+	color : var(--color-white);
+	border-bottom-color:var(--color-second);
+}
+
+#number-info,#email-info{
+	margin: 20px 0px 10px 0px;
+	font-weight: bold;
+	color : var(--color-white);
+}
+#number-info i,#email-info i{
+	font-size: 30px;
+	color: var(--color-primary);
+}
+#HOME{
+	margin: 20px 100px 0px 100px;
+}
+#HOME div{
+	display: inline-flex;
+}
+#HOME div h5{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: left;
+}
+#HOME div img{
+	width: 50%;
+}
+#HOME div div{
+	padding: 10px;
+	text-align: justify;
+  	width : 400px;
+  	text-justify: inter-character;
+	display: flex;
+	flex-wrap: wrap;
+}
+#bar-info-order div i{
+	color: var(--color-primary);
+}
+
+#bar-info-order div span{
+	color: white;
+	font-weight: bold;
+}
+
+#bar-info-service{
+	width: auto;
+	margin: 20px 100px 0px 100px;
+	height: 300px;
+	display: flex;
+}
+
+#bar-info-service .item{
+	padding: 9px;
+	text-align: justify;
+  	width : 300px;
+  	text-justify: inter-character;
+}
+
+#bar-info-service .item h5{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: left;
+}
+#bar-info-service .item h5 i.ready{
+	color :green;
+}
+#bar-info-service .item h5 i.noready{
+	color :red;
+}
+
+#bar-info-service .item div:hover{
+	margin-top: 10px;
+	border-top: 1px var(--color-second) solid;
+}
+
+#bar-info-service .item .btn-order{
+	margin-top: 10px;
+	width: auto;
+	padding: 3px;
+	font-size: 15px;
+	border-radius: 1px;
+	font-weight: bold;
+	color: var(--color-gray);
+	background: var(--color-second);
+}
+
+#info-method,#info-contact{
+	margin: 100px 100px 0px 100px;
+	height: 300px;
+	display: flex;
+}
+#info-method div img{
+	width: 500px;
+}
+#info-contact .img{
+	height:250px;
+}
+#info-contact .img img{
+	width: 200px;
+	height:250px;
+	display: flex;
+	border-radius: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#info-method .info h5,#info-contact .info h5{
+	font-weight: bold;
+}
+
+#info-method .info h5 span,#info-contact .info h5 span{
+	font-weight: bold;
+	color: var(--color-second);
+}
+
+#list-keahlian{
+	width : 600px;
+	display: inline-flex;
+	flex-direction: row;
+	overflow-x: scroll;
+}
+
+#list-keahlian img{
+	margin: 3px;
+	width: 100px;
+	height: 100px;
+}
+
+#footer{
+	text-align: center;
+	padding: 10px;
+	height: 50px;
+	font-weight: bold;
+	color: var(--color-second);
+	background-color: var(--color-primary);
+}
+
+#popUpOrder{
+	z-index: 10;
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	background-color: rgba(10,0,1,0.9);
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#popUpOrder .form{
+	color: white;
+	margin: auto;
+	margin-top: 30px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+	#header .col-sm-1 img{
+		width: 50px;
+	} 
+	#navbar{
+		display: none;
+	}
+	#iconNavbar{
+		display: block;
+		font-size: 25px;
+		cursor: pointer;
+		width: 10px;
+		margin: auto;
+	}
+	#navbar a{
+		display: flex;
+		margin: auto;
+		background: transparent;
+		color : var(--color-white);
+		font-weight: bold;
+		font-size: 10px;
+	}
+	#number-info,#email-info{
+		display: none;
+	}
+
+	#bar-info-order{
+		width: auto;
+	}
+
+	#HOME{
+		width: auto;
+		margin: auto;
+		margin-top: 10px;
+	}
+	#HOME div{
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+	}
+	
+	#HOME div img{
+		width: 100%;
+		height: 200px;
+	}
+
+	#bar-info-service{
+		width: 100%;
+		margin-left: auto;
+		display: flex;
+		flex-wrap: wrap;
+		height: auto;
+	}
+	#bar-info-service .item{
+		width: 100%;
+		margin: auto;
+		padding: 20px;
+	}
+	#info-method{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		height: auto;
+		margin:0;
+		padding: 15px;
+		text-align: justify;
+	}
+	#info-method div img{
+		width: 100%;
+	}
+	#info-contact{
+		padding: 15px;
+		margin: auto;
+		width: 100%;
+		height: auto;
+	}
+	#list-keahlian{
+		width: auto;
+		height: auto;
+		display: flex;
+	}
+}
